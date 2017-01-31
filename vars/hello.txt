@@ -1,0 +1,2 @@
+<h2>Global Variable: hello</h2>
+<p>Say hello!</p>
