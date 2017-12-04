@@ -1,6 +1,6 @@
 def call(body) {
     def tag = sh returnStdout: true,
 	    script: "echo ${env.BUILD_NUMBER}-`git rev-parse HEAD` | tr -d '\n'"
-	echo "Set tag to ${tag}"
+    echo "The tag is: ${tag}"
     return tag
 }

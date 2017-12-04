@@ -1,0 +1,5 @@
+Params:
+imageName - the name of a Docker image
+imageTag - the tag for the docker image name above
+
+Attempts to stop all running containers by the above name:tag, then remove the container and underlying image.
