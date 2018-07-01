@@ -3,6 +3,6 @@ def call(imageName, imageTag) {
     sh """
         docker ps -q --filter ancestor='$imageName:$imageTag' | xargs docker stop || true
         docker ps -a -q --filter ancestor='$imageName:$imageTag' | xargs docker rm || true
-        docker images --format '{{.Repository}}:{{.Tag}}' | grep '^$imageName' | xargs docker rmi || true
+        docker images --format '{{.Repository}}:{{.Tag}}' | grep '^$imageName:imageTag' | xargs docker rmi || true
     """
 }
